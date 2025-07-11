@@ -53,6 +53,73 @@
   position: relative;
 }
 
+.game-board {
+  background: #f8f9fa;
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  margin: auto;
+}
+
+.btn-game {
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(32,64,32,0.07);
+  cursor: pointer;
+  transition: background 0.24s, transform 0.13s;
+}
+.btn-game:active {
+  transform: scale(0.96);
+  opacity: 0.87;
+}
+.btn-game:disabled {
+  opacity: 0.64;
+  cursor: not-allowed;
+}
+.btn-dir {
+  background: #fff;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 5px 3px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.07);
+  cursor: pointer;
+  transition: background 0.14s, color 0.17s;
+}
+.btn-dir:active {
+  background: #4CAF50;
+  color: #fff;
+}
+.food-dot {
+  width: 58%;
+  height: 58%;
+  background: #FFC107;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.show-mobile-controls {
+  display: none;
+}
+
+/* Responsive Board & Mobile Controls */
+@media (max-width: 768px) {
+  .game-board {
+    max-width: 98vw;
+    border-width: 1.5px;
+  }
+  .show-mobile-controls {
+    display: block;
+  }
+}
+
 .App-link {
   color: var(--text-secondary);
   transition: color 0.3s ease;
